@@ -7,9 +7,10 @@
     font-size: 50px;
     display: flex;
     justify-content: center;
-    color:aliceblue;
-    margin-bottom: 70px
+    color: aliceblue;
+    margin-bottom: 70px;
 }
+
 .container .tittle span {
     color: aqua;
     margin-left: 15px;
@@ -36,11 +37,20 @@
     border-radius: 15%;
     height: 150px;
     width: 150px;
-    margin: 5px 5px 5px 5px;
+    margin: 5px;
     background-color: #1f3540;
     border: 3px solid #0f1b21;
     cursor: pointer;
+    position: relative;  /* Ensure the img is positioned within the box */
 }
+
+.board .row .boxes img {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+    position: absolute;  /* Position the image absolutely within the box */
+}
+
 .board .reset{
     width: 200px;
     height: 100px;
@@ -54,20 +64,13 @@
     margin-top: 25px;
     margin-bottom: 50px;
 }
-.boxes .row .boxes img{
-    margin: 50px 50px;
-}
-@media (max-width:700px) {
+
+@media (max-width: 700px) {
     .container h1{
         font-size: 40px;
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        color:aliceblue;
-        margin-bottom: 10px
+        margin-bottom: 10px;
     }
     .board .row .boxes{
-        border-radius: 15%;
         height: 120px;
         width: 120px;
     }
@@ -77,50 +80,44 @@
         font-size: 20px;
     }
 }
+@media (max-width: 510px) {
+    .container h1{
+        flex-direction: column
+    }
 
-@media (max-width:480px) {
+@media (max-width: 480px) {
     .container h1{
         font-size: 30px;
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        color:aliceblue;
-        margin-bottom: 10px
+        margin-bottom: 10px;
     }
     .board .row .boxes{
-        border-radius: 15%;
         height: 110px;
         width: 110px;
     }
     .board .reset{
         width: 80px;
         height: 40px;
-        color: #26ffcb;
-        margin-top: 25px;
-        margin-bottom: 50px;
         font-size: 20px;
     }
 }
-@media (max-width:380px) {
+
+@media (max-width: 380px) {
     .container h1{
-        font-size: 25px;
-        display: flex;
-        justify-content: center;
         flex-direction: column;
-        color:aliceblue;
-        margin-bottom: 0px
+        font-size: 25px;
+        margin-bottom: -40px;
     }
     .board .row .boxes{
-        border-radius: 15%;
         height: 80px;
         width: 80px;
     }
     .board .reset{
-        width: 80px;
-        height: 40px;
-        color: #26ffcb;
-        margin-top: 25px;
-        margin-bottom: 50px;
+        width: 100px;
+        height: 30px;
         font-size: 20px;
+    }
+    .board .row .boxes img{
+        height: 70%;
+        width: 70%;
     }
 }
