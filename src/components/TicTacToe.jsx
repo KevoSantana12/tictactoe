@@ -73,7 +73,7 @@ function TicTacToe (){
     }
 
     function winner(winner){
-        refTitle.current.innerHTML = `${winner} Wins!`
+        refTitle.current.innerHTML = `${winner} Wins! <span>Congratulations!</span>`
     }
 
     function reset(){
